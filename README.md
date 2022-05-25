@@ -7,7 +7,7 @@ A SwiftUI wrapper around [LiquidLoader](https://github.com/yoavlt/LiquidLoader)
 
 ### For Xcode Projects
 
-File > Swift Packages > Add Package Dependency: https://github.com/MahdiBND/LoadingViewSwiftUI.git
+File > Swift Packages > Add Package Dependency: https://github.com/MahdiBND/LiquidLoaderSwiftUI
 
 ## GrowLine
 ![GrowLine](https://github.com/yoavlt/LiquidLoader/blob/master/Demo/grow-line.gif?raw=true)
