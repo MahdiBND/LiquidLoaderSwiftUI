@@ -1,0 +1,54 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios14.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LoadingView
+import Foundation
+@_exported import LoadingView
+import Swift
+import SwiftUI
+import UIKit
+public enum Effect {
+  case line(UIKit.UIColor, Swift.Int, CoreGraphics.CGFloat, UIKit.UIColor?)
+  case circle(UIKit.UIColor, Swift.Int, CoreGraphics.CGFloat, UIKit.UIColor?)
+  case growLine(UIKit.UIColor, Swift.Int, CoreGraphics.CGFloat, UIKit.UIColor?)
+  case growCircle(UIKit.UIColor, Swift.Int, CoreGraphics.CGFloat, UIKit.UIColor?)
+}
+@objc public class LiquidLoader : UIKit.UIView {
+  public init(frame: CoreGraphics.CGRect, effect: LoadingView.Effect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func show()
+  public func hide()
+  @objc override dynamic public func didMoveToWindow()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+@objc public enum ObjCEffect : Swift.Int {
+  case Line
+  case Circle
+  case GrowLine
+  case GrowCircle
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension LiquidLoader {
+  @objc convenience dynamic public init(frame: CoreGraphics.CGRect, effect: LoadingView.ObjCEffect, color: UIKit.UIColor, numberOfCircle: Swift.Int, duration: CoreGraphics.CGFloat, growColor: UIKit.UIColor? = UIColor.red)
+}
+public struct Loading : SwiftUI.View {
+  public init(background: UIKit.UIColor, tint: UIKit.UIColor)
+  public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11LoadingView0A0V4bodyQrvp", 0) 🦸
+}
+public struct BlurView : SwiftUI.UIViewRepresentable {
+  public func makeUIView(context: LoadingView.BlurView.Context) -> UIKit.UIVisualEffectView
+  public func updateUIView(_ uiView: UIKit.UIVisualEffectView, context: LoadingView.BlurView.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = UIKit.UIVisualEffectView
+}
+extension LoadingView.ObjCEffect : Swift.Equatable {}
+extension LoadingView.ObjCEffect : Swift.Hashable {}
+extension LoadingView.ObjCEffect : Swift.RawRepresentable {}
