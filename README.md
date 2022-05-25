@@ -14,6 +14,7 @@ File > Swift Packages > Add Package Dependency: https://github.com/MahdiBND/Load
 
 ## Usage
 
+First import `LoadingView`
 Embed your view content in a `ZStack` with the Loader as the last element.
 
 ```swift
